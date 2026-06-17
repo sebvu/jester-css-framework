@@ -24,7 +24,7 @@
 
 :root {
   --base-size: 0.75rem;
-  --base-response: 1;
+  --base-response: 1vw;
 
   /* clamp multipliers */
   --lower-clamp-ratio: 2;
