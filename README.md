@@ -94,4 +94,36 @@ the font face would be defined as such.
 
 ## Color Themes?
 
+I use [Realtime Colors generator](https://www.realtimecolors.com) which gives me the 5 color fields defined in the CSS file.
 
+```css
+:root {
+  /* ... */
+
+  /* color accessors */
+  --text-color: var(--_text-color);
+  --background-color: var(--_background-color);
+  --primary-color: var(--_primary-color);
+  --secondary-color: var(--_secondary-color);
+  --accent-color: var(--_accent-color);
+
+  /* light theme (default) */
+  --_text-color: #050316;
+  --_background-color: #fbfbfe;
+  --_primary-color: #2f27ce;
+  --_secondary-color: #dddbff;
+  --_accent-color: #443dff;
+}
+
+/* dark theme */
+:root[data-theme="dark"] {
+  --_text-color: #eae9fc;
+  --_background-color: #010104;
+  --_primary-color: #3a31d8;
+  --_secondary-color: #020024;
+  --_accent-color: #0600c2;
+}
+```
+
+> [!NOTE]
+> For customization, just edit the `--_*` fields for light theme and dark theme. You can easily just omit the dark theme by deleting the class definition, or keep adding more `data-theme` attribute definitions for more! Obviously if you want static color themes, just add your own as an independent variable in `:root`.
