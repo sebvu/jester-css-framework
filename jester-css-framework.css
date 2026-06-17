@@ -50,8 +50,6 @@
   --size-xl: calc(var(--size-lg) * var(--size-scale-up-ratio));
   --size-xxl: calc(var(--size-xl) * var(--size-scale-up-ratio));
   --size-xxxl: calc(var(--size-xxl) * var(--size-scale-up-ratio));
-
-  /* optional color fields */
 }
 
 /* === size context providers === */
