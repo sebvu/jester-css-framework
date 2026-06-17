@@ -6,7 +6,7 @@ A very simple CSS Framework, using Josh Comeau's [**Custom CSS Reset**](https://
 
 It is essentially a BEM w/utilities framework with a reset :)
 
-!> [!IMPORTANT]
+> [!IMPORTANT]
 > The CSS file has fields that can be tweaked to your convenience. What can be tweaked will be shown through NOTE shoutouts.
 
 ## Basic Methodology Breakdown
@@ -25,7 +25,7 @@ It is particularly useful for consistent styling, in this particular *context*, 
 - `--size` is defined by providing a context class.. by default it is `--size-context-rg`. The context will provide a size relative to its class name, that is responsive by nature.
 - `--size` variable should be used for defining responsive sizes within an application, and can be slightly offset by using `calc`.
 
-!> [!NOTE]
+> [!NOTE]
 > To tweak global sizes, look at `:root` definition.
 
 ```css
@@ -91,5 +91,5 @@ the font face would be defined as such.
 }
 ```
 
-!> [!IMPORTANT]
+> [!IMPORTANT]
 > Remember, always try to opt for **semantic class names!** For example. instead of `._text._text--foo` it could be `._text._text--header-font` which actually has usage meaning.
