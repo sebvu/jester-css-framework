@@ -1,22 +1,18 @@
 # Jester's CSS Framework v1
 
-A very simple CSS Framework, using Josh Comeau's [**Custom CSS Reset**](https://www.joshwcomeau.com/css/custom-css-reset/) for vanilla CSS development.
-
-> realistically you can just replace/remove the CSS reset, but I keep it here for my own usage
-
-It is essentially a BEM w/utilities framework with a reset :)
+A *very* simple CSS Framework for vanilla CSS development.
 
 > [!IMPORTANT]
 > The CSS file has fields that can be tweaked to your convenience. What can be tweaked will be shown through NOTE shoutouts.
 
 ## Basic Methodology Breakdown
 
+I call this a framework, but it's more like a methodology that happens to come with helper classes. *You* should ultimately be responsible for what this simple CSS file does, and if you should follow the methodology breakdown or not. It is fully up to your discretion.
+
 Super basic explanation. This framework uses a tweaked **[BEM](https://bem.info/en/)** methodology.
 
 - Classes prefaced by `_`, example, `._foo`, expect a context size.
 - Classes prefaced by `--`, example, `.--bar`, are utility classes, which does not exist in BEM. They are used in any part of the code base.
-
-I call this a framework, but if anything it's a **methodology** that happens to have helper classes. This is fully meant to be edited, and used to your discretion. Heck, it's barely a framework lol.
 
 ## What is a Context?
 
@@ -50,7 +46,7 @@ It is particularly useful for consistent styling, in this particular *context*, 
 
 ## Why text classes?
 
-If there is one consistent thing about a application, it *should* be text. Which is why there are text classes!
+If there is one consistent thing about a application, it *should* be text. Text classes exist to standardize the styling of texts to only a few options, nothing more!
 
 - `._text` class should be used for *any* text on a page. Since it is prefaced by `_` it expects a context size to be defined.
 
