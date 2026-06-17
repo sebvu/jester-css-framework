@@ -1,6 +1,6 @@
 # Jester's CSS Framework v1
 
-A very simple CSS Framework, using Josh Comeau's [**Custom CSS Reset**](https://www.joshwcomeau.com/css/custom-css-reset/) for vanilla CSS development.
+A very sim p le CSS Framework, using Josh Comeau's [**Custom CSS Reset**](https://www.joshwcomeau.com/css/custom-css-reset/) for vanilla CSS development.
 
 > realistically you can just replace/remove the CSS reset, but I keep it here for my own usage
 
@@ -15,6 +15,8 @@ Super basic explanation. This framework uses a tweaked **[BEM](https://bem.info/
 
 - Classes prefaced by `_`, example, `._foo`, expect a context size.
 - Classes prefaced by `--`, example, `.--bar`, are utility classes, which does not exist in BEM. They are used in any part of the code base.
+
+I call this a framework, but if anything it's a **methodology** css class that happens to have helper classes. This is fully meant to be edited, and used to your discretion. Heck, it's barely a framework lol.
 
 ## What is a Context?
 
