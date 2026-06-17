@@ -26,6 +26,10 @@
   --base-size: 0.75rem;
   --base-response: 1.5vw;
 
+  /* clamp multipliers */
+  --lower-clamp-ratio: 1.5;
+  --higher-clamp-ratio: 2.5;
+
   /* ratio multiplier between sizes */
   --size-scale-down-ratio: 0.8rem;
   --size-scale-up-ratio: 1.2rem;
@@ -34,7 +38,11 @@
   --size: var(--_size, var(--size-rg, 1rem));
 
   /* base size */
-  --size-rg: calc(var(--base-size) + var(--base-response));
+  --size-rg: clamp(
+    var(--base-size) * var(--lower-clamp-ratio),
+    var(--base-size) + var(--base-response),
+    var(--base-size) * var(--higher-clamp-ratio)
+  );
   /* smaller */
   --size-sm: calc(var(--size-rg) * var(--size-scale-down-ratio));
   --size-xs: calc(var(--size-sm) * var(--size-scale-down-ratio));

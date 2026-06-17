@@ -31,6 +31,10 @@ It is particularly useful for consistent styling, in this particular *context*, 
   --base-size: 0.75rem;
   --base-response: 1.5vw;
 
+  /* clamp multipliers */
+  --lower-clamp-ratio: 1.5;
+  --higher-clamp-ratio: 2.5;
+
   /* ratio multiplier between sizes */
   --size-scale-down-ratio: 0.8rem;
   --size-scale-up-ratio: 1.2rem;
@@ -41,6 +45,8 @@ It is particularly useful for consistent styling, in this particular *context*, 
 | -------------- | --------------- |
 | `--base-size` | The base defined size. |
 | `--base-response` | Responsive size to be added to base size. |
+| `--lower-clamp-ratio` | Multiplier for context sizes above rg |
+| `--size-scale-up-ratio` | Multiplier for context sizes above rg |
 | `--size-scale-down-ratio` | Multiplier for context sizes below rg|
 | `--size-scale-up-ratio` | Multiplier for context sizes above rg |
 
