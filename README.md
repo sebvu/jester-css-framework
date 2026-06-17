@@ -92,4 +92,4 @@ the font face would be defined as such.
 ```
 
 > [!IMPORTANT]
-> Remember, always try to opt for **semantic class names!** For example. instead of `._text._text--foo` it could be `._text._text--header-font` which actually has usage meaning.
+> Remember, always try to opt for **semantic class names!** For example. instead of `._text._text--foo` it could be `._text._text--header` which actually has usage meaning.
