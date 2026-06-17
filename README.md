@@ -1,6 +1,6 @@
 # Jester's CSS Framework v1
 
-A very sim p le CSS Framework, using Josh Comeau's [**Custom CSS Reset**](https://www.joshwcomeau.com/css/custom-css-reset/) for vanilla CSS development.
+A very simple CSS Framework, using Josh Comeau's [**Custom CSS Reset**](https://www.joshwcomeau.com/css/custom-css-reset/) for vanilla CSS development.
 
 > realistically you can just replace/remove the CSS reset, but I keep it here for my own usage
 
