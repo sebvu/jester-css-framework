@@ -1,3 +1,95 @@
 # Jester's CSS Framework
 
-This is a simple CSS Framework in conjuction with utilizing Josh Comeau's [**Custom CSS Reset**](https://www.joshwcomeau.com/css/custom-css-reset/) as well as basic BEM and utility class methodology for vanilla CSS development, with rules I found particularly for my development.
+A very simple CSS Framework, using Josh Comeau's [**Custom CSS Reset**](https://www.joshwcomeau.com/css/custom-css-reset/) for vanilla CSS development.
+
+> realistically you can just replace/remove the CSS reset, but I keep it here for my own usage
+
+It is essentially a BEM w/utilities framework with a reset :)
+
+!> [!IMPORTANT]
+> The CSS file has fields that can be tweaked to your convenience. What can be tweaked will be shown through NOTE shoutouts.
+
+## Basic Methodology Breakdown
+
+Super basic explanation. This framework uses a tweaked **[BEM](https://bem.info/en/)** methodology.
+
+- Classes prefaced by `_`, example, `._foo`, expect a context size.
+- Classes prefaced by `--`, example, `.--bar`, are utility classes, which does not exist in BEM. They are used in any part of the code base.
+
+## What is a Context?
+
+Context is the current information given for that particular state, shared amongst any other children within that state.
+
+It is particularly useful for consistent styling, in this particular *context*, size styling!
+
+- `--size` is defined by providing a context class.. by default it is `--size-context-rg`. The context will provide a size relative to its class name, that is responsive by nature.
+- `--size` variable should be used for defining responsive sizes within an application, and can be slightly offset by using `calc`.
+
+!> [!NOTE]
+> To tweak global sizes, look at `:root` definition.
+
+```css
+:root {
+  --base-size: 0.75rem;
+  --base-response: 1.5vw;
+
+  /* ratio multiplier between sizes */
+  --size-scale-down-ratio: 0.8rem;
+  --size-scale-up-ratio: 1.2rem;
+
+  /* ... */
+```
+| Variable Name | Description |
+| -------------- | --------------- |
+| `--base-size` | The base defined size. |
+| `--base-response` | Responsive size to be added to base size. |
+| `--size-scale-down-ratio` | Multiplier for context sizes below rg|
+| `--size-scale-up-ratio` | Multiplier for context sizes above rg |
+
+## Why text classes?
+
+If there is one consistent thing about a application, it *should* be text. Which is why there are text classes!
+
+- `._text` class should be used for *any* text on a page. Since it is prefaced by `_` it expects a context size to be defined.
+
+```css
+._text {
+  font-family:
+    var(--_font-family), system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: var(--size);
+  font-weight: normal;
+}
+```
+
+It also has class modifiers, following BEM methodologies.
+
+- `._text._text--bold` makes font bold
+- `._text._text--italic` makes font italic
+
+> [!NOTE]
+> The `--_font-family` variable is not initially defined as it is up to your discretion!
+
+Take the foo class definition for example.
+
+```css
+._text._text--foo {
+  --_font-family: var(--_foo-bar-family);
+}
+```
+the font face would be defined as such.
+
+```css
+@font-face {
+  --_foo-font-family: "foo";
+  font-family: var(--_foo-font-family);
+  src:
+    url("foo.woff2") format("woff2"),
+    url("foo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+```
+
+!> [!IMPORTANT]
+> Remember, always try to opt for **semantic class names!** For example. instead of `._text._text--foo` it could be `._text._text--header-font` and make more sense in any context it is used.
