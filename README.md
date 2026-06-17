@@ -45,8 +45,8 @@ It is particularly useful for consistent styling, in this particular *context*, 
 | -------------- | --------------- |
 | `--base-size` | The base defined size. |
 | `--base-response` | Responsive size to be added to base size. |
-| `--lower-clamp-ratio` | Multiplier for context sizes above rg |
-| `--size-scale-up-ratio` | Multiplier for context sizes above rg |
+| `--lower-clamp-ratio` | Multiplied against base size to provide lower clamp threshold |
+| `--higher-clamp-ratio` | Multiplied against base sizer to provide higher clamp threshold |
 | `--size-scale-down-ratio` | Multiplier for context sizes below rg|
 | `--size-scale-up-ratio` | Multiplier for context sizes above rg |
 
