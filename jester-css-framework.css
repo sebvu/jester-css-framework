@@ -72,58 +72,58 @@
 /* === size context providers === */
 
 .--size-context-rg {
-  --_size: var(--size-rg);
+  --size: var(--size-rg);
 }
 
 .--size-context-sm {
-  --_size: var(--size-sm);
+  --size: var(--size-sm);
 }
 
 .--size-context-xss {
-  --_size: var(--size-xss);
+  --size: var(--size-xss);
 }
 
 .--size-context-xsss {
-  --_size: var(--size-xsss);
+  --size: var(--size-xsss);
 }
 
 .--size-context-md {
-  --_size: var(--size-md);
+  --size: var(--size-md);
 }
 
 .--size-context-lg {
-  --_size: var(--size-lg);
+  --size: var(--size-lg);
 }
 
 .--size-context-xl {
-  --_size: var(--size-xl);
+  --size: var(--size-xl);
 }
 
 .--size-context-xxl {
-  --_size: var(--size-xxl);
+  --size: var(--size-xxl);
 }
 
 .--size-context-xxxl {
-  --_size: var(--size-xxxl);
+  --size: var(--size-xxxl);
 }
 
 /* === text classes === */
 
 ._text {
   font-family:
-    var(--_font-family), system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    var(--font-family), system-ui, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: var(--_size);
+  font-size: var(--size);
   font-weight: normal;
 }
 
 /*
 ._text._text--foo {
-  --_font-family: "foo";
+  --font-family: "foo";
 }
 
 ._text._text--bar {
-  --_font-family: "bar";
+  --font-family: "bar";
 }
 */
 
