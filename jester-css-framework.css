@@ -6,8 +6,7 @@
 
 /*
 @font-face {
-  --foo-font-family: "foo";
-  font-family: var(--_foo-font-family);
+  font-family: "foo";
   src:
     url("foo.woff2") format("woff2"),
     url("foo.woff") format("woff");
@@ -16,8 +15,7 @@
 }
 
 @font-face {
-  --bar-font-family: "bar";
-  font-family: var(--_bar-font-family);
+  font-family: "bar";
   src:
     url("bar.woff2") format("woff2"),
     url("bar.woff") format("woff");
@@ -127,11 +125,11 @@
 
 /*
 ._text._text--foo {
-  --_font-family: var(--foo-bar-family);
+  --_font-family: "foo";
 }
 
 ._text._text--bar {
-  --_font-family: var(--bar-font-family);
+  --_font-family: "bar";
 }
 */
 

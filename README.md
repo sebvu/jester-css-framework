@@ -72,15 +72,14 @@ Take the foo class definition for example.
 
 ```css
 ._text._text--foo {
-  --_font-family: var(--_foo-bar-family);
+  --_font-family: "foo";
 }
 ```
 the font face would be defined as such.
 
 ```css
 @font-face {
-  --_foo-font-family: "foo";
-  font-family: var(--_foo-font-family);
+  font-family: "foo";
   src:
     url("foo.woff2") format("woff2"),
     url("foo.woff") format("woff");
