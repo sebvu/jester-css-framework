@@ -20,8 +20,8 @@ Context is the current information given for that particular state, shared among
 
 It is particularly useful for consistent styling, in this particular *context*, size styling!
 
-- `--size` is defined by providing a context class.. by default it is `--size-context-rg`. The context will provide a size relative to its class name, that is responsive by nature.
-- `--size` variable should be used for defining responsive sizes within an application, and can be slightly offset by using `calc`.
+- `--_size` is defined by providing a context class.. by default it is `--size-context-rg`. The context will provide a size relative to its class name, that is responsive by nature.
+- `--_size` variable should be used for defining responsive sizes within an application, and can be slightly offset by using `calc`.
 
 > [!NOTE]
 > To tweak global sizes, look at `:root` definition.
