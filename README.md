@@ -29,11 +29,11 @@ It is particularly useful for consistent styling, in this particular *context*, 
 ```css
 :root {
   --base-size: 0.75rem;
-  --base-response: 1.5vw;
+  --base-response: 1vw;
 
   /* clamp multipliers */
-  --lower-clamp-ratio: 1.5;
-  --higher-clamp-ratio: 2.5;
+  --lower-clamp-ratio: 2;
+  --higher-clamp-ratio: 3;
 
   /* ratio multiplier between sizes */
   --size-scale-down-ratio: 0.8rem;
