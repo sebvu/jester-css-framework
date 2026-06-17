@@ -2,8 +2,6 @@
   Jester's CSS Framework File
 */
 
-/* optional fields to be defined by user */
-
 /*
 @font-face {
   font-family: "foo";
@@ -40,8 +38,8 @@
   /* smaller */
   --size-sm: calc(var(--size-rg) * var(--size-scale-down-ratio));
   --size-xs: calc(var(--size-sm) * var(--size-scale-down-ratio));
-  --size-xss: calc(var(--size-xs) * var(--size-scale-down-ratio));
-  --size-xsss: calc(var(--size-xss) * var(--size-scale-down-ratio));
+  --size-xxs: calc(var(--size-xs) * var(--size-scale-down-ratio));
+  --size-xxxs: calc(var(--size-xxs) * var(--size-scale-down-ratio));
   /* larger */
   --size-md: calc(var(--size-rg) * var(--size-scale-up-ratio));
   --size-lg: calc(var(--size-md) * var(--size-scale-up-ratio));
@@ -120,8 +118,6 @@
   font-size: var(--size);
   font-weight: normal;
 }
-
-/* optional fields to be defined by user */
 
 /*
 ._text._text--foo {
