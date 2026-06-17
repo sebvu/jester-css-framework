@@ -1,4 +1,4 @@
-# Jester's CSS Framework
+# Jester's CSS Framework v1
 
 A very simple CSS Framework, using Josh Comeau's [**Custom CSS Reset**](https://www.joshwcomeau.com/css/custom-css-reset/) for vanilla CSS development.
 
@@ -92,4 +92,4 @@ the font face would be defined as such.
 ```
 
 !> [!IMPORTANT]
-> Remember, always try to opt for **semantic class names!** For example. instead of `._text._text--foo` it could be `._text._text--header-font` and make more sense in any context it is used.
+> Remember, always try to opt for **semantic class names!** For example. instead of `._text._text--foo` it could be `._text._text--header-font` which actually has usage meaning.
