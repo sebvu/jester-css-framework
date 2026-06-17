@@ -1,4 +1,4 @@
-# Jester's CSS Framework v0.1 (early stages)
+# Jester's CSS Framework v0.2 (cleanup stages)
 
 A *very* simple CSS Framework for vanilla CSS development.
 
