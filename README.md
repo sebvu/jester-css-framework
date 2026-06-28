@@ -3,63 +3,66 @@
 A *very* simple CSS Framework for vanilla CSS development.
 
 > [!IMPORTANT]
-> The CSS file has fields that can be tweaked to your convenience. What can be tweaked will be shown through NOTE shoutouts.
+> The CSS file is **meant** to be tweaked to your preferences. What can be tweaked is listed below.
 
-## Basic Methodology Breakdown
+## Why?
 
-I call this a framework, but it's more like a methodology that happens to come with helper classes. *You* should ultimately be responsible for what this simple CSS file does, and if you should follow the methodology breakdown or not. It is fully up to your discretion.
+This is ultimately my own mixed methodology vomited on to a re-usable CSS document. It's mainly for the convenience of my development, but also to solve the problem of inconsistencies in foundational CSS design by giving a clear cut, extremely simple framework to work with.
 
-Super basic explanation. This framework uses a tweaked **[BEM](https://bem.info/en/)** methodology.
+## Methodologies
 
-- Classes prefaced by `_`, example, `._foo`, expect a context size.
-- Classes prefaced by `--`, example, `.--bar`, are utility classes, which does not exist in BEM. They are used in any part of the code base.
+This project uses **[BEM (Block Element Modifier)](https://bem.info/en/)** methodology for naming classes in my CSS document. I did, however, add my own changes to the methodology.
 
-## What is a Context?
+- Classes prefaced by `_`, example, `._foo`, expect a size context.
+- Classes prefaced by `--`, example, `.--bar`, are utility classes. They can be used anywhere in the structure, and do not belong to a block element 
+
+> [!NOTE]
+> Knowing BEM is NOT required to use this framework. Use it however you like! However, I personally find it useful for my own methodologies, and would recommend anyone to check it out.
+
+## Size Context
 
 Context is the current information given for that particular state, shared amongst any other children within that state.
 
-It is particularly useful for consistent styling, in this particular *context*, size styling!
+The reason why we have size context is simple, size consistency. Of course we can define our individual font sizes, widths, heights, etc.. But being able to scale from one source of truth i.e. the `--size` variable, makes grouped items scale relatively to the same source.
 
-- `--size` is defined by providing a context class.. by default it is `--size-context-rg`. The context will provide a size relative to its class name, that is responsive by nature.
-- `--size` variable should be used for defining responsive sizes within an application, and can be slightly offset by using `calc`.
+- The `--size` variable is defined when you provide a context class. It is set to a sizing unit.
+- For tuning the size, you can utilize `calc()` by doing `calc(var(--size) * 0.8)`
 
-> [!NOTE]
-> To tweak global sizes, look at `:root` definition.
-
+To edit the default values, edit this field in the css document.
 ```css
 :root {
-  --base-size: 0.75rem;
+  /* === SIZE CONTEXT TUNER VARIABLES === */
+
+  /* base variables 
+  - static variables all sizes are based off of */
+  --base-size: 1rem;
   --base-response: 1vw;
+  --base-static-multiplier: 2.5; /* increase static regular base */
 
-  /* clamp multipliers */
-  --lower-clamp-ratio: 2;
-  --higher-clamp-ratio: 3;
+  /* clamp multipliers
+  - determine ratio relative to base to clamp */
+  --lower-clamp-ratio: 0.5;
+  --higher-clamp-ratio: 2;
 
-  /* ratio multiplier between sizes */
-  --size-scale-down-ratio: 0.8rem;
-  --size-scale-up-ratio: 1.2rem;
-
-  /* ... */
+  /* scale multipliers 
+   - the ratio of scale up/down for every size change */
+  --size-scale-down-ratio: 0.8;
+  --size-scale-up-ratio: 1.2;
+  
+  ...
+}
 ```
-| Variable Name | Description |
-| -------------- | --------------- |
-| `--base-size` | The base defined size. |
-| `--base-response` | Responsive size to be added to base size. |
-| `--lower-clamp-ratio` | Multiplied against base size to provide lower clamp threshold |
-| `--higher-clamp-ratio` | Multiplied against base sizer to provide higher clamp threshold |
-| `--size-scale-down-ratio` | Multiplier for context sizes below rg|
-| `--size-scale-up-ratio` | Multiplier for context sizes above rg |
 
-## Why text classes?
+## Text classes?
 
-If there is one consistent thing about a application, it *should* be text. Text classes exist to standardize the styling of texts to only a few options, nothing more!
+Text classes fall under the same reasoning as Size Contexts; consistency.
 
-- `._text` class should be used for *any* text on a page. Since it is prefaced by `_` it expects a context size to be defined.
+- `_text` class should be applied for any text, and or text based containers.
 
 ```css
 ._text {
   font-family:
-    var(--_font-family), system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    var(--font-family), system-ui, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: var(--size);
   font-weight: normal;
@@ -71,31 +74,27 @@ It also has class modifiers, following BEM methodologies.
 - `._text._text--bold` makes font bold
 - `._text._text--italic` makes font italic
 
-> [!NOTE]
-> The `--_font-family` variable is not initially defined as it is up to your discretion!
-
-Take the foo class definition for example.
+Notice the `--font-family` variable. On the document, there are commented out `@font-face` and `._text--foo` fields. These exist as example fiels, and could be subbed out with something like `--font-family: "abel"` with the class named as `._text--abel`.
 
 ```css
-._text._text--foo {
-  --_font-family: "foo";
+._text._text--abel-font {
+  --_font-family: "abel";
 }
 ```
 the font face would be defined as such.
 
 ```css
 @font-face {
-  font-family: "foo";
+  font-family: "abel";
   src:
-    url("foo.woff2") format("woff2"),
-    url("foo.woff") format("woff");
+    url("abel.woff2") format("woff2"),
+    url("abel.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 ```
-
-> [!IMPORTANT]
-> Remember, always try to opt for **semantic class names!** For example. instead of `._text._text--foo` it could be `._text._text--header` which actually has usage meaning.
+> [!NOTE]
+> Use semantic names! Your font family name could be named the font itself, `abel`, but use semantic class names! In this case, the class name can be `._text--header-font`.
 
 ## Color Themes?
 
@@ -124,4 +123,4 @@ I use [Realtime Colors generator](https://www.realtimecolors.com) which gives me
 ```
 
 > [!NOTE]
-> For customization, just edit the `--*` fields for light theme and dark theme. You can easily just omit the dark theme by deleting the class definition, or keep adding more `data-theme` attribute definitions for more! Obviously if you want static color themes, just add your own as an independent variable in `:root`.
+> For customization, just edit the `--*` fields for light theme and dark theme. You can easily just omit the dark theme by deleting the class definition, or keep adding more `data-theme` attribute definitions for more! Obviously if you want static color variables, just add your own as an independent variable in `:root`.

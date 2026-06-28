@@ -84,81 +84,81 @@
   --size: var(--size-rg);
 }
 
-.--size-context-sm {
+.--context-sm {
   --size: var(--size-sm);
 }
 
-.--size-context-xs {
+.--context-xs {
   --size: var(--size-xs);
 }
 
-.--size-context-xxs {
+.--context-xxs {
   --size: var(--size-xxs);
 }
 
-.--size-context-xxxs {
+.--context-xxxs {
   --size: var(--size-xxxs);
 }
 
-.--size-context-md {
+.--context-md {
   --size: var(--size-md);
 }
 
-.--size-context-lg {
+.--context-lg {
   --size: var(--size-lg);
 }
 
-.--size-context-xl {
+.--context-xl {
   --size: var(--size-xl);
 }
 
-.--size-context-xxl {
+.--context-xxl {
   --size: var(--size-xxl);
 }
 
-.--size-context-xxxl {
+.--context-xxxl {
   --size: var(--size-xxxl);
 }
 
 /* static accessors */
 
-.--size-context-rg-static {
+.--context-rg-static {
   --size: var(--size-rg-static);
 }
 
-.--size-context-sm-static {
+.--context-sm-static {
   --size: var(--size-sm-static);
 }
 
-.--size-context-xs-static {
+.--context-xs-static {
   --size: var(--size-xs-static);
 }
 
-.--size-context-xxs-static {
+.--context-xxs-static {
   --size: var(--size-xxs-static);
 }
 
-.--size-context-xxxs-static {
+.--context-xxxs-static {
   --size: var(--size-xxxs-static);
 }
 
-.--size-context-md-static {
+.--context-md-static {
   --size: var(--size-md-static);
 }
 
-.--size-context-lg-static {
+.--context-lg-static {
   --size: var(--size-lg-static);
 }
 
-.--size-context-xl-static {
+.--context-xl-static {
   --size: var(--size-xl-static);
 }
 
-.--size-context-xxl-static {
+.--context-xxl-static {
   --size: var(--size-xxl-static);
 }
 
-.--size-context-xxxl-static {
+.--context-xxxl-static {
   --size: var(--size-xxxl-static);
 }
 
@@ -185,17 +185,18 @@
 }
 
 /*
-._text._text--foo {
+._text._text--foo-font,
+._text ._text--foo-font {
   --font-family: "foo"
 }
 */
 
 ._text._text--bold,
-._text > ._text--bold {
+._text ._text--bold {
   font-weight: bold;
 }
 
 ._text._text--italic,
-._text > ._text--italic {
+._text ._text--italic {
   font-style: italic;
 }
