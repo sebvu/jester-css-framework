@@ -49,7 +49,7 @@ To edit the default values, edit this field in the css document.
   --size-scale-down-ratio: 0.8;
   --size-scale-up-ratio: 1.2;
   
-  ...
+  /* ... */
 }
 ```
 
